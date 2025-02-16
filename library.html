@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library - WebNote</title>
+    <link rel="stylesheet" href="library.css">
+    <script defer src="library.js"></script>
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="logo">
+                <a href="index.html">Web<span class="highlight">N</span>ote</a>
+            </div>
+            <div id="nav-links">
+                <span id="username-display" style="display: none;"></span>
+                <div id="user-menu" class="dropdown-menu">
+                    <div class="user-menu-item" id="settings-btn">Settings</div>
+                    <div class="user-menu-item" id="dropdown-library-btn">Library</div>
+                    <div class="user-menu-item" id="logout-btn">Logout</div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="library-container">
+        <div id="search-bar-container">
+            <input type="text" id="search-bar" placeholder="Search Notes...">
+        </div>
+
+        <div class="library-header">
+            <button id="new-note-btn">📝 New Note</button>
+        </div>
+
+        <div class="note-list-container">
+            <div id="note-list">
+                <!-- 노트들이 여기에 추가됨 -->
+            </div>
+        </div>
+    </main>
+
+
+
+    <!-- 새 노트 입력 창 -->
+    <div id="new-note-modal" class="modal">
+        <div class="modal-content">
+            <h3>Create New Note</h3>
+            <input type="text" id="new-note-name" maxlength="20" placeholder="Enter note title...">
+            <button id="create-note-btn">➜</button>
+        </div>
+    </div>
+</body>
+
+</html>

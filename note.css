@@ -1,0 +1,141 @@
+
+body,
+h1,
+button,
+canvas {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: white;
+    width: calc(100% - 40px);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.tools {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.tool-group {
+    display: flex;
+    gap: 5px;
+    padding: 0 10px;
+    border-right: 1px solid #dee2e6;
+}
+
+.tool-group:last-child {
+    border-right: none;
+}
+
+.tool-btn {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #f0f0f0;
+}
+
+.tool-btn.active {
+    background: #007bff;
+    color: white;
+}
+
+#color-picker {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    border-radius: 4px;
+}
+
+#pen-size {
+    padding: 8px;
+    border-radius: 4px;
+}
+
+main {
+    margin-top: 70px;
+    flex: 1;
+    overflow: hidden;
+}
+
+#drawing-canvas {
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+#back-button,
+#save-note {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+#save-note {
+    background-color: #28a745;
+}
+
+#back-button:hover {
+    background-color: #0056b3;
+}
+
+#save-note:hover {
+    background-color: #218838;
+}
+
+#note-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .tools {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .tool-group {
+        border-right: none;
+        border-bottom: 1px solid #dee2e6;
+        padding-bottom: 5px;
+    }
+
+    .tool-group:last-child {
+        border-bottom: none;
+    }
+}

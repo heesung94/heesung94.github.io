@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note</title>
+    <link rel="stylesheet" href="note.css">
+</head>
+
+<body>
+    <header>
+        <button id="back-button">⬅ Back</button>
+        <h1 id="note-title"></h1>
+        <div class="tools">
+            <div class="tool-group">
+                <button id="pen-tool" class="tool-btn active" title="Pen">✏️</button>
+                <button id="text-tool" class="tool-btn" title="Text">T</button>
+                <button id="eraser-tool" class="tool-btn" title="Eraser">🧹</button>
+
+            </div>
+
+            <div class="tool-group">
+                <input type="color" id="color-picker" value="#000000" title="Color">
+                <input type="number" id="pen-size" value="3" min="1" max="50" title="Size">
+                <button id="clear-all" class="tool-btn" title="Clear All">🗑️</button>
+            </div>
+        </div>
+        <button id="save-note">💾 Save</button>
+    </header>
+    <main>
+        <canvas id="drawing-canvas"></canvas>
+    </main>
+    <script src="note.js"></script>
+</body>
+
+</html>
